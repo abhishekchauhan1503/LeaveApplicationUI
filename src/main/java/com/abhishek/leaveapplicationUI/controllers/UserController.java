@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.abhishek.leaveapplication.model.Role;
 import com.abhishek.leaveapplication.model.User;
 import com.abhishek.leaveapplicationUI.HomeController;
+import com.abhishek.leaveapplicationservice.generatedclasses.CreateUserInput;
 import com.abhishek.leaveapplicationservice.services.RoleServices;
 import com.abhishek.leaveapplicationservice.services.UserServices;
 
@@ -59,7 +60,7 @@ public class UserController {
 
 		model.setViewName("registerUser");
 
-		model.addObject("user", new User());
+		model.addObject("user", new CreateUserInput());
 		logger.info("Redirecting to user registration page");
 
 		return model;
@@ -67,12 +68,12 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/registerUserProcess")
-	public ModelAndView registerUser(@ModelAttribute("user") User user, BindingResult result){
+	public ModelAndView registerUser(@ModelAttribute("user") CreateUserInput user, BindingResult result){
 		ModelAndView modelAndView = new ModelAndView();
 
 		try{
 		long id = userServices.createUser(user);
-		modelAndView.setViewName("/");
+		modelAndView.setViewName("home");
 		
 		}
 		catch(Exception ex){

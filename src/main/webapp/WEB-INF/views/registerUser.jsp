@@ -17,7 +17,7 @@
 		<form:input type="text" id="password" path="password" />
 		<br />
 		<label id="role">Role: </label>
-		<form:select id="roles" path="roleType">
+		<form:select id="roles" path="roleId">
 			<c:forEach var="role" items="${roles}">
 				<option value="${role.key}"
 					<c:if test="${selected == role.key}"> selected </c:if>>${role.value}</option>
