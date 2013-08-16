@@ -19,10 +19,6 @@
 		<label id="Content">Content: </label>
 		<form:input type="text" id="content" path="content" />
 		<br />
-		<form:label id="subDate" path="submissionDate">Date: </form:label>
-		<form:input type="text" id="date" path="submissionDate" />
-		<br />
-
 		<input type="submit" value="Submit" />
 
 	</form:form>
