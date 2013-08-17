@@ -4,7 +4,7 @@
 
 	<!-- Appenders -->
 	<appender name="fileLog" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="/home/abhishek/LeaveApplicationLogs/UI/LeaveApplicationUI.log" />
+		<param name="File" value="/home/abhishekchauhan1503/LeaveApplicationLogs/UI/LeaveApplicationUI.log" />
 		<param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
 		<param name="Append" value="true" />
 		<layout class="org.apache.log4j.PatternLayout">

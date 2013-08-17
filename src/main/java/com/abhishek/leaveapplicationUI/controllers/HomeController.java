@@ -1,4 +1,4 @@
-package com.abhishek.leaveapplicationUI;
+package com.abhishek.leaveapplicationUI.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -47,44 +47,12 @@ public class HomeController {
 	@Autowired
 	private Role role;
 	
-	@Resource(name = "roles")
-	Map<String, String> roles;
-	
-	
-	
-	public Map<String, String> getRoles() {
-		return roles;
-	}
-
-
-
-	public void setRoles(Map<String, String> roles) {
-		this.roles = roles;
-	}
-
-
-
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+		@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		model.addAttribute("roles", roles);
-		model.addAttribute("selected", "1");
-
-		try {
-			//roleServices.createRole(role);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			logger.error("Error: Cannot create new Role. Detailled error:\n", e);
-		}
-		logger.info(role.getRoleName());
-		
 		return "home";
 	}
 	

@@ -31,9 +31,18 @@
 
 	<beans:import resource="classpath:/META-INF/spring/service-context.xml" />
 
-	<util:map id="roles" key-type="int" value-type="java.lang.String">
+	<beans:bean id="name" class="java.lang.String" />
+	<util:map id="roles" key-type="java.lang.Long" value-type="java.lang.String">
 		<beans:entry key="1" value="Manager" />
 		<beans:entry key="2" value="User" />
 	</util:map>
-
+	<beans:bean id="userController"
+		class="com.abhishek.leaveapplicationUI.controllers.UserController">
+		<beans:property name="roles" ref="roles"></beans:property>
+		<beans:property name="name" ref="name"></beans:property>
+	</beans:bean>
+	<beans:bean id="system" class="com.abhishek.leaveapplication.model.User">
+		<beans:property name="id" value="3"></beans:property>
+		<beans:property name="userName" value="SYSTEM"></beans:property>
+	</beans:bean>
 </beans:beans>

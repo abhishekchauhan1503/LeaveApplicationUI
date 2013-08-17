@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.abhishek.leaveapplication.model.Role;
 import com.abhishek.leaveapplication.model.User;
-import com.abhishek.leaveapplicationUI.HomeController;
 import com.abhishek.leaveapplicationservice.generatedclasses.CreateUserInput;
 import com.abhishek.leaveapplicationservice.services.RoleServices;
 import com.abhishek.leaveapplicationservice.services.UserServices;
@@ -30,25 +30,58 @@ public class UserController {
 		return userServices;
 	}
 
-	// @Resource(name="roleService")
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public static Logger getLogger() {
+		return logger;
+	}
+
 	public void setUserServices(UserServices userServices) {
 		this.userServices = userServices;
 	}
 
+	
+
+	//@Resource(name="name")
+	private String name;
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
 	@Autowired
 	private Role role;
 
+	
 	@Resource(name = "roles")
-	Map<String, String> roles;
+	Map<Long, String> roles;
 
-	public Map<String, String> getRoles() {
+	public Map<Long, String> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(Map<String, String> roles) {
+	public void setRoles(Map<Long, String> roles) {
 		this.roles = roles;
 	}
+	
+	
 
+	
+	
 	private static final Logger logger = LoggerFactory
 			.getLogger(UserController.class);
 
