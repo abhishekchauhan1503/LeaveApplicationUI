@@ -8,6 +8,7 @@
 	<h1>Hello world!</h1>
 <a href="/leaveapplicationUI/registerUser">Register User</a>
 <a href="/leaveapplicationUI/application">New Application</a>
+<a href="/leaveapplicationUI/getAllApplicationsForUserView">View Applications</a>
 
 	<P>The time on the server is ${serverTime}.</P>
 
