@@ -15,13 +15,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.abhishek.leaveapplication.generatedclasses.CreateNewMessageInput;
-import com.abhishek.leaveapplication.generatedclasses.GetApplicationForUserInput;
 import com.abhishek.leaveapplication.model.Message;
 import com.abhishek.leaveapplication.model.User;
 import com.abhishek.leaveapplicationservice.entity.ApplicationEntity;
 import com.abhishek.leaveapplicationservice.generatedclasses.CreateApplicationInput;
+import com.abhishek.leaveapplicationservice.generatedclasses.CreateNewMessageInput;
+import com.abhishek.leaveapplicationservice.generatedclasses.GetApplicationForUserInput;
 import com.abhishek.leaveapplicationservice.generatedclasses.UpdateApplicationInput;
 import com.abhishek.leaveapplicationservice.services.ApplicationServices;
 import com.abhishek.leaveapplicationservice.services.MessageService;

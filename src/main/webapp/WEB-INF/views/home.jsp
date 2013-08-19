@@ -6,9 +6,14 @@
 </head>
 <body>
 	<h1>Hello world!</h1>
-<a href="/leaveapplicationUI/registerUser">Register User</a>
-<a href="/leaveapplicationUI/application">New Application</a>
-<a href="/leaveapplicationUI/getAllApplicationsForUserView">View Applications</a>
+	<a href="/leaveapplicationUI/registerUser">Register User</a>
+	<a href="/leaveapplicationUI/application">New Application</a>
+	<a href="/leaveapplicationUI/getAllApplicationsForUserView">View
+		Applications</a>
+	<a href="/leaveapplicationUI/getMessagesForUserView">View Messages</a>
+	<a href="/leaveapplicationUI/login">Login</a>
+
+	<br />
 
 	<P>The time on the server is ${serverTime}.</P>
 
