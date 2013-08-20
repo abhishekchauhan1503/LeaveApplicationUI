@@ -144,7 +144,7 @@ public class ApplicationController {
 			BindingResult result,
 			@RequestParam(value = "action", required = false) String action) {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("home");
+		mav.setViewName("viewAllApplications");
 		String managerActionMessage = "";
 		String userActionMessage = "";
 
